@@ -12,7 +12,7 @@ public class VerificationArticle implements Question<Boolean> {
         return compare;
     }
 
-    public static VerificationArticle verificationText(){
+    public static VerificationArticle verificationText() {
         return new VerificationArticle();
     }
 }

@@ -16,6 +16,7 @@ public class VerificationUrl implements Question<String> {
     public String answeredBy(Actor actor) {
         return driver.getCurrentUrl(); // Obtiene la URL actual de la página
     }
+
     public static Question<String> currentUrl() {
         return new VerificationUrl();
     }
