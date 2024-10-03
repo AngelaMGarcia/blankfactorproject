@@ -2,7 +2,6 @@ package co.com.screenplay.project.interactions;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
-import net.serenitybdd.screenplay.actions.SwitchToNewWindow;
 import net.thucydides.core.annotations.Managed;
 import org.openqa.selenium.WebDriver;
 
@@ -13,7 +12,7 @@ public class Switch implements Interaction {
 
     @Managed
     WebDriver driver;
- Set<String>    originalWindow = driver.getWindowHandles();
+    Set<String> originalWindow = driver.getWindowHandles();
     Set<String> allWindows = driver.getWindowHandles();
 
     @Override
