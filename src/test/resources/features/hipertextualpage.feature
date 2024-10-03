@@ -15,9 +15,9 @@ Feature: open hipertextual page
     When she search for steve jobs
     Then she should read the post
 
-   @test2
+  @test2
   Scenario: Subscribe to the newsletter
-    When enter the newsletter option
+    When she enter the newsletter option
     Then she should subscribe to the newsletter
 
 
