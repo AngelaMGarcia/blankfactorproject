@@ -14,7 +14,7 @@ plugins {
     id 'idea'
 }
 
-defaultTasks 'clean','test','aggregate'
+defaultTasks 'clean', 'test', 'aggregate'
 apply plugin: 'net.serenity-bdd.serenity-gradle-plugin'
 
 group 'co.com.screenplay.project'
@@ -23,8 +23,8 @@ version '1.0-SNAPSHOT'
 compileJava.options.encoding = "UTF-8"
 compileTestJava.options.encoding = "UTF-8"
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = 17
+targetCompatibility = 17
 
 repositories {
     mavenCentral()
@@ -42,13 +42,12 @@ ext {
 }
 
 dependencies {
-    testImplementation ("net.serenity-bdd:serenity-core:${serenityCoreVersion}"){
+    testImplementation("net.serenity-bdd:serenity-core:${serenityCoreVersion}") {
         exclude group: 'org.apache.groovy', module: 'groovy'
         testImplementation 'net.serenity-bdd:serenity-core:3.3.4'
         testImplementation 'net.serenity-bdd:serenity-junit5:3.3.4'
         testImplementation 'net.serenity-bdd:serenity-screenplay-webdriver:3.3.4'
     }
-
 
 
     implementation "net.serenity-bdd:serenity-ensure:${serenityCoreVersion}"
@@ -66,14 +65,12 @@ dependencies {
     implementation 'org.seleniumhq.selenium:selenium-java:4.0.0'
 
 
-
 }
 test {
     useJUnitPlatform()
     testLogging.showStandardStreams = true
     systemProperties System.getProperties()
 }
-
 
 
 gradle.startParameter.continueOnFailure = true
